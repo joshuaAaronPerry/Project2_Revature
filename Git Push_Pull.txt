@@ -1,0 +1,18 @@
+These commands work for me:
+
+1. Make sure to pull the most recent version of the project from Github
+- git pull origin 
+(if "origin" does not exist create an origin by:)
+- git remote add origin (url)
+2. Add file/s that you want to push.
+- git add "name of file/s"
+- using the "." (dot) to add all the files is not recommended, to avoid setbacks.
+3. Commit files
+- git commit -m "some meaning full message of what you updated"
+4. Push Files 
+- git push origin
+(once again: (if "origin" does not exist create an origin by: git remote add origin (url))
+
+use "git status" at any point to check status of files.
+
+
