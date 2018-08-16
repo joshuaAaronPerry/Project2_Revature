@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
-public class TrainerLocationsTest {
+public class TrainerLocations {
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
   }

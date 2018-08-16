@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
-public class SVPCirculaTest {
+public class SVPLocations {
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
   }
