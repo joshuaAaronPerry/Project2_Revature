@@ -39,8 +39,22 @@ public class Driver {
 		d.findElement(By.name("email")).sendKeys("svp@revature.com");
 		d.findElement(By.name("password")).sendKeys("p@$$w0rd");
 		d.findElement(By.name("submit")).click();
-
 		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("before");
+		d.findElement(By.id("mat-tab-label-0-1")).click();
+		System.out.println("after");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 public static void loginTrainer() {
 		
