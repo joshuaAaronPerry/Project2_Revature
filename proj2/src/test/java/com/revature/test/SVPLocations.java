@@ -1,58 +1,248 @@
 package com.revature.test;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.BeforeClass;
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class SVPLocations {
-  @Test(dataProvider = "dp")
-  public void f(Integer n, String s) {
-  }
-  @BeforeMethod
-  public void beforeMethod() {
-  }
+	static WebDriver d = null;
 
-  @AfterMethod
-  public void afterMethod() {
-  }
+	
 
+//  		closeApp();
+//  		launchApp();
+//  		loginTrainer();
+//  		closeApp();
 
-  @DataProvider
-  public Object[][] dp() {
-    return new Object[][] {
-      new Object[] { 1, "a" },
-      new Object[] { 2, "b" },
-    };
-  }
-  @BeforeClass
-  public void beforeClass() {
-  }
+	public static void launchApp() {
+		// TODO Auto-generated method stub
+		File chrome = new File("src/main/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+		d = new ChromeDriver();
+		d.get("https://assignforce-client.cfapps.io/login");
+	}
 
-  @AfterClass
-  public void afterClass() {
-  }
+	public static void loginSVP() {
 
-  @BeforeTest
-  public void beforeTest() {
-  }
+		boolean expand = true;
+		while (expand) {
+			try {
+				Thread.sleep(500);
+				d.findElement(By.name("email")).sendKeys("svp@revature.com");
+				d.findElement(By.name("password")).sendKeys("p@$$w0rd");
+				d.findElement(By.name("submit")).click();
+				System.out.println("Finally Log in!");
+				expand = false;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Nope");
+			} catch (Exception e) {
+				System.out.println("Naw");
 
-  @AfterTest
-  public void afterTest() {
-  }
+			}
+		}
 
-  @BeforeSuite
-  public void beforeSuite() {
-  }
+	}
 
-  @AfterSuite
-  public void afterSuite() {
-  }
+	public static void loginTrainer() {
+
+		boolean expand = true;
+		while (expand) {
+			try {
+				Thread.sleep(500);
+				d.findElement(By.name("email")).sendKeys("test.trainer@revature.com");
+				d.findElement(By.name("password")).sendKeys("p@$$w0rd");
+				d.findElement(By.name("submit")).click();
+				System.out.println("Finally Log in!");
+				expand = false;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Nope");
+			} catch (Exception e) {
+				System.out.println("Naw");
+
+			}
+		}
+
+	}
+
+	public static void moveToLocationTab() {
+
+		boolean expand = true;
+		while (expand) {
+			try {
+				Thread.sleep(500);
+				d.findElement(By.id("mat-tab-label-0-2")).click();
+				System.out.println("Finally moved!");
+				expand = false;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Nope");
+			} catch (Exception e) {
+				System.out.println("Naw");
+
+			}
+		}
+
+	}
+
+	public static void clickLocationBar() {
+
+		boolean expand = true;
+		while (expand) {
+			try {
+				Thread.sleep(500);
+				d.findElement(By.id("mat-expansion-panel-header-1")).click();
+				System.out.println("Finally collapse");
+				expand = false;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Nope");
+			} catch (Exception e) {
+				System.out.println("Naw");
+
+			}
+		}
+		while (!expand) {
+			try {
+				Thread.sleep(500);
+				d.findElement(By.id("mat-expansion-panel-header-1")).click();
+				System.out.println("Finally expand");
+				expand = true;
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Nope");
+			} catch (Exception e) {
+				System.out.println("Naw");
+
+			}
+		}
+
+	}
+
+	public static void expandFirstLocation() {
+		d.findElement(By.id("mat-expansion-panel-header-2")).click();
+	}
+
+	public static void collapseFirstLocation() {
+		d.findElement(By.id("mat-expansion-panel-header-2")).click();
+	}
+
+	public static void addLocation() {
+
+		try {
+			Thread.sleep(500);
+			d.findElement(By.className("cdk-overlay-container")).click();
+//  			d.findElement(By.id("cdk-overlay-23")).click();
+//  			d.findElement(By.id("mat-input-3")).sendKeys("FarAWAY");
+			System.out.println("Finally Clicked Add Location");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void closeApp() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		d.quit();
+	}
+
+	
+	public static void launchResults() {
+		File chrome = new File("src/main/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+		d = new ChromeDriver();
+		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\index.html");
+	}
+	
+	@Test
+	public void testAppLaunch() {
+		launchApp();
+	}
+	
+	@Test (dependsOnMethods = "testAppLaunch")
+	public void testLoginSVP(){
+		loginSVP();
+	}
+	
+	@Test (dependsOnMethods = "testLoginSVP")
+	public void testMoveToLocationBar() {
+		moveToLocationTab();
+	}
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testCloseApp() {
+		closeApp();
+	}
+	
+	@Test (dependsOnMethods = "testCloseApp")
+	public void testLaunchResults() {
+		launchResults();
+	}
+	
+	@Test
+	public void failTest() {
+		
+		Assert.assertEquals(false, true);
+	}
+	
+	@BeforeMethod
+	public void beforeMethod() {
+	}
+
+	@AfterMethod
+	public void afterMethod() {
+	}
+
+	@DataProvider
+	public Object[][] dp() {
+		return new Object[][] { new Object[] { 1, "a" }, new Object[] { 2, "b" }, };
+	}
+
+	@BeforeClass
+	public void beforeClass() {
+	}
+
+	@AfterClass
+	public void afterClass() {
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+	}
+
+	@AfterTest
+	public void afterTest() {
+	}
+
+	@BeforeSuite
+	public void beforeSuite() {
+	}
+
+	@AfterSuite
+	public void afterSuite() {
+	}
 
 }
