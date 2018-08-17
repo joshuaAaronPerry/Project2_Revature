@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="2" ignored="0" total="7" passed="5">
   <reporter-output>
   </reporter-output>
@@ -118,6 +119,37 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- testLaunchResults -->
       </class> <!-- com.revature.test.SVPLocations -->
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31176" started-at="2018-08-17T18:00:58Z" finished-at="2018-08-17T18:01:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31176" started-at="2018-08-17T18:00:58Z" finished-at="2018-08-17T18:01:30Z">
+      <class name="com.revature.webdriver.Svp_overview">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.webdriver.Svp_overview@7a3d45bd]" name="testAppLaunch" duration-ms="4500" started-at="2018-08-17T18:00:58Z" finished-at="2018-08-17T18:01:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppLaunch -->
+        <test-method status="PASS" signature="testLoginSVP()[pri:0, instance:com.revature.webdriver.Svp_overview@7a3d45bd]" name="testLoginSVP" duration-ms="2405" started-at="2018-08-17T18:01:03Z" depends-on-methods="com.revature.webdriver.Svp_overview.testAppLaunch" finished-at="2018-08-17T18:01:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSVP -->
+        <test-method status="PASS" signature="testCycleSorts()[pri:0, instance:com.revature.webdriver.Svp_overview@7a3d45bd]" name="testCycleSorts" duration-ms="22425" started-at="2018-08-17T18:01:05Z" depends-on-methods="com.revature.webdriver.Svp_overview.testLoginSVP" finished-at="2018-08-17T18:01:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCycleSorts -->
+        <test-method status="PASS" signature="testCycleBatches()[pri:0, instance:com.revature.webdriver.Svp_overview@7a3d45bd]" name="testCycleBatches" duration-ms="1250" started-at="2018-08-17T18:01:28Z" depends-on-methods="com.revature.webdriver.Svp_overview.testCycleSorts" finished-at="2018-08-17T18:01:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCycleBatches -->
+        <test-method status="PASS" signature="testExportCSV()[pri:0, instance:com.revature.webdriver.Svp_overview@7a3d45bd]" name="testExportCSV" duration-ms="570" started-at="2018-08-17T18:01:29Z" depends-on-methods="com.revature.webdriver.Svp_overview.testCycleBatches" finished-at="2018-08-17T18:01:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExportCSV -->
+      </class> <!-- com.revature.webdriver.Svp_overview -->
+>>>>>>> origin/steve
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
