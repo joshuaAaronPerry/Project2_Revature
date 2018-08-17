@@ -159,7 +159,7 @@ public class Driver {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-<<<<<<< .merge_file_a15372
+
 		d.findElement(By.name("email")).sendKeys("svp@revature.com");
 		d.findElement(By.name("password")).sendKeys("p@$$w0rd");
 		d.findElement(By.name("submit")).click();
@@ -179,9 +179,8 @@ public class Driver {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-=======
 
->>>>>>> .merge_file_a03024
+
 	}
 	
 	public static void launchResults() {
