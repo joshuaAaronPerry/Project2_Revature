@@ -1,34 +1,31 @@
-package com.revature.svp;
+package com.revature.test;
 
 import java.io.File;
-import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-public class Driver {
-
+public class SVPLocations {
 	static WebDriver d = null;
 
-	public static void main(String[] args) {
-//		launchApp();
-//		loginSVP();
-//		moveToLocationTab();
-//		clickLocationBar();
-//		expandFirstLocation();
-//		collapseFirstLocation();
-//
-//		addLocation();
-		
-		launchResults();
+	
 
-//		closeApp();
-//		launchApp();
-//		loginTrainer();
-//		closeApp();
-
-	}
+//  		closeApp();
+//  		launchApp();
+//  		loginTrainer();
+//  		closeApp();
 
 	public static void launchApp() {
 		// TODO Auto-generated method stub
@@ -41,7 +38,8 @@ public class Driver {
 	public static void loginSVP() {
 
 		boolean expand = true;
-		while (expand) {
+		int i = 0;
+		while (expand && i < 10) {
 			try {
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
@@ -52,8 +50,10 @@ public class Driver {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Nope");
+				i++;
 			} catch (Exception e) {
 				System.out.println("Naw");
+				i++;
 
 			}
 		}
@@ -149,8 +149,8 @@ public class Driver {
 		try {
 			Thread.sleep(500);
 			d.findElement(By.className("cdk-overlay-container")).click();
-//			d.findElement(By.id("cdk-overlay-23")).click();
-//			d.findElement(By.id("mat-input-3")).sendKeys("FarAWAY");
+//  			d.findElement(By.id("cdk-overlay-23")).click();
+//  			d.findElement(By.id("mat-input-3")).sendKeys("FarAWAY");
 			System.out.println("Finally Clicked Add Location");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -161,14 +161,6 @@ public class Driver {
 		}
 
 	}
-	
-	public static void launchResults() {
-		File chrome = new File("src/main/resources/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
-		d = new ChromeDriver();
-		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
-	}
-	
 
 	public static void closeApp() {
 		try {
@@ -179,4 +171,62 @@ public class Driver {
 		}
 		d.quit();
 	}
+
+	
+	public static void launchResults() {
+		File chrome = new File("src/main/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+		d = new ChromeDriver();
+		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
+	}
+	
+	@Test
+	public void testAppLaunch() {
+		launchApp();
+	}
+	
+	@Test (dependsOnMethods = "testAppLaunch")
+	public void testLoginSVP(){
+		loginSVP();
+	}
+	
+	@Test (dependsOnMethods = "testLoginSVP")
+	public void testMoveToLocationBar() {
+		moveToLocationTab();
+	}
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testCloseApp() {
+		closeApp();
+	}
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testCollapseLocation() {
+		collapseFirstLocation();
+	}
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testExpandLocation() {
+		expandFirstLocation();
+	}
+	
+	
+	@Test (dependsOnMethods = "testCloseApp")
+	public void testLaunchResults() {
+		launchResults();
+	}
+	
+	@Test
+	public void failTest() {
+		
+		Assert.assertEquals(false, true);
+	}
+	
+	@Test
+	public void failTest2() {
+		
+		Assert.assertEquals(false, true);
+	}
+	
+
 }
