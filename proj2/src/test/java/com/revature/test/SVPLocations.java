@@ -20,8 +20,6 @@ import org.testng.annotations.Test;
 public class SVPLocations {
 	static WebDriver d = null;
 
-	
-
 //  		closeApp();
 //  		launchApp();
 //  		loginTrainer();
@@ -38,7 +36,10 @@ public class SVPLocations {
 	public static void loginSVP() {
 
 		boolean expand = true;
-		while (expand) {
+
+		int i = 0;
+		while (expand && i < 10) {
+
 			try {
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
@@ -49,8 +50,10 @@ public class SVPLocations {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Nope");
+				i++;
 			} catch (Exception e) {
 				System.out.println("Naw");
+				i++;
 
 			}
 		}
@@ -169,80 +172,62 @@ public class SVPLocations {
 		d.quit();
 	}
 
-	
 	public static void launchResults() {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
-		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\index.html");
+
+		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
+
 	}
-	
+
 	@Test
 	public void testAppLaunch() {
 		launchApp();
 	}
-	
-	@Test (dependsOnMethods = "testAppLaunch")
-	public void testLoginSVP(){
+
+	@Test(dependsOnMethods = "testAppLaunch")
+	public void testLoginSVP() {
 		loginSVP();
 	}
-	
-	@Test (dependsOnMethods = "testLoginSVP")
+
+	@Test(dependsOnMethods = "testLoginSVP")
 	public void testMoveToLocationBar() {
 		moveToLocationTab();
 	}
-	
-	@Test (dependsOnMethods = "testMoveToLocationBar")
+
+	@Test(dependsOnMethods = "testMoveToLocationBar")
 	public void testCloseApp() {
 		closeApp();
 	}
-	
-	@Test (dependsOnMethods = "testCloseApp")
+
+	@Test(dependsOnMethods = "testMoveToLocationBar")
+
+	public void testCollapseLocation() {
+		collapseFirstLocation();
+	}
+
+	@Test(dependsOnMethods = "testMoveToLocationBar")
+	public void testExpandLocation() {
+		expandFirstLocation();
+	}
+
+	@Test(dependsOnMethods = "testCloseApp")
+
 	public void testLaunchResults() {
 		launchResults();
 	}
-	
+
 	@Test
 	public void failTest() {
-		
+
 		Assert.assertEquals(false, true);
 	}
-	
-	@BeforeMethod
-	public void beforeMethod() {
-	}
 
-	@AfterMethod
-	public void afterMethod() {
-	}
+	@Test
+	public void failTest2() {
 
-	@DataProvider
-	public Object[][] dp() {
-		return new Object[][] { new Object[] { 1, "a" }, new Object[] { 2, "b" }, };
-	}
-
-	@BeforeClass
-	public void beforeClass() {
-	}
-
-	@AfterClass
-	public void afterClass() {
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-	}
-
-	@AfterTest
-	public void afterTest() {
-	}
-
-	@BeforeSuite
-	public void beforeSuite() {
-	}
-
-	@AfterSuite
-	public void afterSuite() {
+		Assert.assertEquals(false, true);
 	}
 
 }

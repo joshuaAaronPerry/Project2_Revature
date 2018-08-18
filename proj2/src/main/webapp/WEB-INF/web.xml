@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>TestServlet</servlet-name>
+  	<display-name>TestServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.svp.TestServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MyServlet3</servlet-name>
+  	<display-name>MyServlet3</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.svp.MyServlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MyServlet3</servlet-name>
+  	<url-pattern>/MyServlet3</url-pattern>
+  </servlet-mapping>
 </web-app>
