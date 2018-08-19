@@ -44,6 +44,35 @@ public class Svp_overview {
 			e.printStackTrace();
 		}
 		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[2]")).click();
+		
+		
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]")).click();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[3]")).click();
+			
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]")).click();
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[1]")).click();
+		
+		
 	}
 
 	private static void cycleSorts() {

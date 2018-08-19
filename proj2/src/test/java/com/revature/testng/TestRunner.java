@@ -1,4 +1,4 @@
-package com.revature.test;
+package com.revature.testng;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;

@@ -1,4 +1,4 @@
-package com.revature.test;
+package com.revature.testng;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
