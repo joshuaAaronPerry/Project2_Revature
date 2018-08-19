@@ -27,7 +27,7 @@ public class MyServlet3 extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setStatus(response.SC_MOVED_TEMPORARILY);
-		response.setHeader("Location", "C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
+		response.setHeader("Location", "C:\\project2\\proj2\\test-output\\Default suite\\Default test.html");
 	}
 
 	/**

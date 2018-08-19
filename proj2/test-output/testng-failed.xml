@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.revature.webdriver.Svp_overview">
+      <class name="com.revature.testng.SVPBatches">
         <methods>
+          <include name="testCreateBatch"/>
           <include name="testLoginSVP"/>
-          <include name="testCycleSorts"/>
-          <include name="testExportCSV"/>
+          <include name="selectBatchesTab"/>
+          <include name="testDeleteTopBatch"/>
           <include name="testAppLaunch"/>
-          <include name="testCycleBatches"/>
         </methods>
-      </class> <!-- com.revature.webdriver.Svp_overview -->
+      </class> <!-- com.revature.testng.SVPBatches -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
