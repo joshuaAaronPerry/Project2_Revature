@@ -1,10 +1,16 @@
 package com.revature.svp;
 
 import java.io.File;
+import java.io.IOException;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.xml.LaunchSuite;
 
 public class Driver {
 
@@ -12,19 +18,22 @@ public class Driver {
 
 	public static void main(String[] args) {
 
-		launchApp();
-		loginSVP();
-		moveToLocationTab();
-		clickLocationBar();
-		expandFirstLocation();
-		collapseFirstLocation();
-
+			
+//		launchScript();
 		
-		addLocation();
-		
-		expandFirstLocation();
-		addBuilding();
-		addRoom();
+//		launchApp();
+//		loginSVP();
+//		moveToLocationTab();
+//		clickLocationBar();
+//		expandFirstLocation();
+//		collapseFirstLocation();
+//
+//		
+//		addLocation();
+//		
+//		expandFirstLocation();
+//		addBuilding();
+//		addRoom();
 
 //		closeApp();
 //		launchApp();		
@@ -38,14 +47,35 @@ public class Driver {
 //		launchResults();
 
 	}
+	
+	public static void launchScript() {
+		ScriptEngineManager sem = new ScriptEngineManager();
+		ScriptEngine engine = sem.getEngineByName("JavaScript");
+		try {
+			engine.eval("console.log('Hello World')");
+		} catch (ScriptException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public static boolean launchApp() {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
-		d.get("https://assignforce-client.cfapps.io/login");
+//		d.get("https://assignforce-client.cfapps.io/login");
 
 		return true;
+	}
+	
+	public static boolean goToAssignForce() {
+		try{
+			d.get("https://assignforce-client.cfapps.io/login");
+			return true;
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	public static boolean loginSVP() {
