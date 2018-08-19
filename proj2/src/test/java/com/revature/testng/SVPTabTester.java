@@ -2,7 +2,7 @@ package com.revature.test;
 
 import org.testng.annotations.Test;
 
-public class TrainerCircula {
+public class SVPTabTester {
   @Test
   public void f() {
   }

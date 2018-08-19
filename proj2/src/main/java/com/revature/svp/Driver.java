@@ -1,18 +1,17 @@
 package com.revature.svp;
 
 import java.io.File;
-import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 
 public class Driver {
 
 	static WebDriver d = null;
 
 	public static void main(String[] args) {
+
 		launchApp();
 		loginSVP();
 		moveToLocationTab();
@@ -38,19 +37,14 @@ public class Driver {
 
 //		launchResults();
 
-//		closeApp();
-//		launchApp();
-//		loginTrainer();
-//		closeApp();
-
 	}
 
 	public static boolean launchApp() {
-
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
 		d.get("https://assignforce-client.cfapps.io/login");
+
 		return true;
 	}
 
@@ -60,14 +54,15 @@ public class Driver {
 
 		int i = 0;
 		while (expand && i < 10) {
-
 			try {
+				
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
 				d.findElement(By.name("password")).sendKeys("p@$$w0rd");
 				d.findElement(By.name("submit")).click();
 				System.out.println("Finally Log in!");
 				expand = false;
+
 				return true;
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -118,12 +113,14 @@ public class Driver {
 
 		int i = 0;
 		while (expand && i < 10) {
+
 			try {
 				Thread.sleep(500);
 				d.findElement(By.id("mat-tab-label-0-2")).click();
 				System.out.println("Finally moved!");
 				expand = false;
 				return true;
+				
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Nope");
@@ -131,10 +128,8 @@ public class Driver {
 			} catch (Exception e) {
 				System.out.println("Naw");
 				i++;
-
 			}
 		}
-
 		return false;
 
 	}
@@ -224,6 +219,7 @@ public class Driver {
 
 		int i = 0;
 		while (expand && i < 10) {
+
 			try {
 				Thread.sleep(500);
 				d.findElement(By.id("mat-expansion-panel-header-1")).click();
@@ -242,6 +238,7 @@ public class Driver {
 
 		int j = 0;
 		while (!expand && j < 10) {
+
 			try {
 				Thread.sleep(500);
 				d.findElement(By.id("mat-expansion-panel-header-1")).click();
@@ -256,9 +253,9 @@ public class Driver {
 				System.out.println("Naw");
 				j++;
 
+
 			}
 		}
-
 		return false;
 
 	}
@@ -386,8 +383,9 @@ public class Driver {
 			e.printStackTrace();
 		}
 		return false;
-	}
 
+	}
+	
 	public static boolean expandFocusBar() {
 
 		boolean expand = true;

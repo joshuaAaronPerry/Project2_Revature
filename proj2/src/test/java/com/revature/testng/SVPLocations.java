@@ -1,4 +1,4 @@
-package com.revature.test;
+package com.revature.testng;
 
 import java.io.File;
 
@@ -6,11 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SVPLocations {
 	static WebDriver d = null;
-
 //  		closeApp();
 //  		launchApp();
 //  		loginTrainer();
@@ -27,15 +35,7 @@ public class SVPLocations {
 	public static void loginSVP() {
 
 		boolean expand = true;
-<<<<<<< HEAD
-
-		int i = 0;
-		while (expand && i < 10) {
-
-=======
-		int i = 0;
-		while (expand && i < 10) {
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
+		while (expand) {
 			try {
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
@@ -46,10 +46,8 @@ public class SVPLocations {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Nope");
-				i++;
 			} catch (Exception e) {
 				System.out.println("Naw");
-				i++;
 
 			}
 		}
@@ -168,96 +166,38 @@ public class SVPLocations {
 		d.quit();
 	}
 
+	
 	public static void launchResults() {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
-<<<<<<< HEAD
-
-		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
-
-=======
-		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
+		d.get("C:\\project2\\proj2\\test-output\\index.html");
 	}
-
+	
 	@Test
 	public void testAppLaunch() {
 		launchApp();
 	}
-
-	@Test(dependsOnMethods = "testAppLaunch")
-	public void testLoginSVP() {
+	
+	@Test (dependsOnMethods = "testAppLaunch")
+	public void testLoginSVP(){
 		loginSVP();
 	}
-
-	@Test(dependsOnMethods = "testLoginSVP")
+	
+	@Test (dependsOnMethods = "testLoginSVP")
 	public void testMoveToLocationBar() {
 		moveToLocationTab();
 	}
-
-	@Test(dependsOnMethods = "testMoveToLocationBar")
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
 	public void testCloseApp() {
 		closeApp();
 	}
-<<<<<<< HEAD
-
-	@Test(dependsOnMethods = "testMoveToLocationBar")
-
-	public void testCollapseLocation() {
-		collapseFirstLocation();
-	}
-
-	@Test(dependsOnMethods = "testMoveToLocationBar")
-	public void testExpandLocation() {
-		expandFirstLocation();
-	}
-
-	@Test(dependsOnMethods = "testCloseApp")
-
-	public void testLaunchResults() {
-		launchResults();
-	}
-
-	@Test
-	public void failTest() {
-
-		Assert.assertEquals(false, true);
-	}
-
-	@Test
-	public void failTest2() {
-
-=======
-	
-	@Test (dependsOnMethods = "testMoveToLocationBar")
-	public void testCollapseLocation() {
-		collapseFirstLocation();
-	}
-	
-	@Test (dependsOnMethods = "testMoveToLocationBar")
-	public void testExpandLocation() {
-		expandFirstLocation();
-	}
-	
 	
 	@Test (dependsOnMethods = "testCloseApp")
 	public void testLaunchResults() {
 		launchResults();
+
 	}
-	
-	@Test
-	public void failTest() {
-		
-		Assert.assertEquals(false, true);
-	}
-	
-	@Test
-	public void failTest2() {
-		
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
-		Assert.assertEquals(false, true);
-	}
-	
 
 }
