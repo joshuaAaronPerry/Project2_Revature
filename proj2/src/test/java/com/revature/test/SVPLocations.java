@@ -27,15 +27,8 @@ public class SVPLocations {
 	public static void loginSVP() {
 
 		boolean expand = true;
-<<<<<<< HEAD
-
 		int i = 0;
 		while (expand && i < 10) {
-
-=======
-		int i = 0;
-		while (expand && i < 10) {
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
 			try {
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
@@ -172,13 +165,8 @@ public class SVPLocations {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
-<<<<<<< HEAD
 
 		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
-
-=======
-		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
 	}
 
 	@Test
@@ -200,7 +188,6 @@ public class SVPLocations {
 	public void testCloseApp() {
 		closeApp();
 	}
-<<<<<<< HEAD
 
 	@Test(dependsOnMethods = "testMoveToLocationBar")
 
@@ -227,37 +214,7 @@ public class SVPLocations {
 
 	@Test
 	public void failTest2() {
-
-=======
-	
-	@Test (dependsOnMethods = "testMoveToLocationBar")
-	public void testCollapseLocation() {
-		collapseFirstLocation();
-	}
-	
-	@Test (dependsOnMethods = "testMoveToLocationBar")
-	public void testExpandLocation() {
-		expandFirstLocation();
-	}
-	
-	
-	@Test (dependsOnMethods = "testCloseApp")
-	public void testLaunchResults() {
-		launchResults();
-	}
-	
-	@Test
-	public void failTest() {
-		
 		Assert.assertEquals(false, true);
 	}
-	
-	@Test
-	public void failTest2() {
-		
->>>>>>> e1e66021724e182cf86e566c2afe9fa69aa58abf
-		Assert.assertEquals(false, true);
-	}
-	
 
 }

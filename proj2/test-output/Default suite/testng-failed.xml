@@ -3,14 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.revature.test.TrainerLocations">
+      <class name="com.revature.test.SVPLocations">
         <methods>
-          <include name="testMoveToCirculaBar"/>
-          <include name="testAddFocus"/>
-          <include name="testLaunchApp"/>
-          <include name="testLoginTrainer"/>
+          <include name="testLoginSVP"/>
+          <include name="testMoveToLocationBar"/>
+          <include name="testExpandLocation"/>
+          <include name="testAppLaunch"/>
+          <include name="failTest"/>
+          <include name="testCollapseLocation"/>
+          <include name="failTest2"/>
         </methods>
-      </class> <!-- com.revature.test.TrainerLocations -->
+      </class> <!-- com.revature.test.SVPLocations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
