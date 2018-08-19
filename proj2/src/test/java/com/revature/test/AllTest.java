@@ -8,16 +8,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SVPLocations {
+public class AllTest {
+
 	static WebDriver d = null;
 
-//  		closeApp();
-//  		launchApp();
-//  		loginTrainer();
-//  		closeApp();
+//	closeApp();
+//	launchApp();
+//	loginTrainer();
+//	closeApp();
 
 	public static void launchApp() {
-		// TODO Auto-generated method stub
+
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
@@ -27,8 +28,8 @@ public class SVPLocations {
 	public static void loginSVP() {
 
 		boolean expand = true;
-
 		int i = 0;
+		
 		while (expand && i < 10) {
 
 			try {
@@ -140,8 +141,8 @@ public class SVPLocations {
 		try {
 			Thread.sleep(500);
 			d.findElement(By.className("cdk-overlay-container")).click();
-//  			d.findElement(By.id("cdk-overlay-23")).click();
-//  			d.findElement(By.id("mat-input-3")).sendKeys("FarAWAY");
+//		d.findElement(By.id("cdk-overlay-23")).click();
+//		d.findElement(By.id("mat-input-3")).sendKeys("FarAWAY");
 			System.out.println("Finally Clicked Add Location");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

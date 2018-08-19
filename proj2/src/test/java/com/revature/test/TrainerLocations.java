@@ -600,21 +600,21 @@ public class TrainerLocations {
 //
 //	}
 
-//	@Test(dependsOnMethods = "testMoveToCirculaBar")
-//	public void testAddFocus() {
-//		d.findElement(By.xpath("//*[@id=\"mat-expansion-panel-header-2\"]/span[1]/mat-panel-description/button"))
-//				.click();
+	@Test(dependsOnMethods = "testMoveToCirculaBar")
+	public void testAddFocus() {
+		d.findElement(By.xpath("//*[@id=\"mat-expansion-panel-header-2\"]/span[1]/mat-panel-description/button"))
+				.click();
+
+//		if (!(i < 10)) {
+//			Assert.fail();
+//		}
 //
-////		if (!(i < 10)) {
-////			Assert.fail();
-////		}
-////
-//		d.findElement(By.xpath("//*[@id=\"mat-input-0\"]")).sendKeys("Troubleshoot");
-//		d.findElement(By.xpath("//*[@id=\"mat-select-0\"]")).click();
-//		d.findElement(By.xpath("//*[@id=\"mat-option-29\"]")).click();
-//		d.findElement(By.xpath("/html/body/div[2]/div[3]")).click();
-//		d.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/app-add-focus/div[2]/button[2]")).click();
-//	}
+		d.findElement(By.xpath("//*[@id=\"mat-input-0\"]")).sendKeys("Troubleshoot");
+		d.findElement(By.xpath("//*[@id=\"mat-select-0\"]")).click();
+		d.findElement(By.xpath("//*[@id=\"mat-option-29\"]")).click();
+		d.findElement(By.xpath("/html/body/div[2]/div[3]")).click();
+		d.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/app-add-focus/div[2]/button[2]")).click();
+	}
 
 	@Test(dependsOnMethods = "testMoveToCirculaBar")
 	public void testEditFocus() {

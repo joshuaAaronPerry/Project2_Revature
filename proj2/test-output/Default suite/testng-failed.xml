@@ -6,9 +6,9 @@
       <class name="com.revature.test.TrainerLocations">
         <methods>
           <include name="testMoveToCirculaBar"/>
+          <include name="testAddFocus"/>
           <include name="testLaunchApp"/>
           <include name="testLoginTrainer"/>
-          <include name="testEditFocus"/>
         </methods>
       </class> <!-- com.revature.test.TrainerLocations -->
     </classes>
