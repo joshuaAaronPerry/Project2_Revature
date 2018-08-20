@@ -3,9 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.revature.test.SVPLocations">
+=======
+      <class name="com.revature.testng.SVPBatches">
+>>>>>>> 1348a103e03518da4e35b6ec27457f47bf3f0958
         <methods>
+          <include name="testCreateBatch"/>
           <include name="testLoginSVP"/>
+<<<<<<< HEAD
           <include name="testMoveToLocationBar"/>
           <include name="testExpandLocation"/>
           <include name="testAppLaunch"/>
@@ -14,6 +20,13 @@
           <include name="failTest2"/>
         </methods>
       </class> <!-- com.revature.test.SVPLocations -->
+=======
+          <include name="selectBatchesTab"/>
+          <include name="testDeleteTopBatch"/>
+          <include name="testAppLaunch"/>
+        </methods>
+      </class> <!-- com.revature.testng.SVPBatches -->
+>>>>>>> 1348a103e03518da4e35b6ec27457f47bf3f0958
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
