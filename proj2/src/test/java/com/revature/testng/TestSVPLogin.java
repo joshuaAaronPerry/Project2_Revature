@@ -17,7 +17,10 @@ public class TestSVPLogin {
 	public static void openChrome() {
 		File ff = new File("src/main/resources/chromedriver");
 		System.setProperty("webdriver.chrome.driver", ff.getAbsolutePath());
-		wd = new ChromeDriver();
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("headless");
+		wd = new ChromeDriver(co);
+		
 		wd.manage().window().maximize();
 		wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
