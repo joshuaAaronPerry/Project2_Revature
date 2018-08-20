@@ -10,7 +10,7 @@ public class TestSVPSettingsPage {
 
 	//public static WebDriver wd = null;
 	
-	@Test(dependsOnMethods = { "com.revature.test.TestLogin.SVPlogin" })
+	@Test(dependsOnMethods = { "com.revature.test.TestSVPLogin.SVPlogin" })
 	public void openSVPSettingsPage() {
 		try {
 			Thread.sleep(4000);
