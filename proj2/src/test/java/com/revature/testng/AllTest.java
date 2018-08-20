@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class AllTest {
 
@@ -21,7 +22,9 @@ public class AllTest {
 
 		File chrome = new File("src/main/resources/chromedriver");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
-		d = new ChromeDriver();
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("headless");
+		d = new ChromeDriver(co);
 		d.get("https://assignforce-client.cfapps.io/login");
 	}
 
