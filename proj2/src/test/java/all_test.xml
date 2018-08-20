@@ -5,9 +5,9 @@
       <class name="com.revature.test.AllTest"/>
       	<class name="com.revature.test.TestTrainerLogin"></class>
 	<class name="com.revature.test.TestTrainerSettings"></class>
-	<class name="com.revature.test.TestReportPage"></class>
+	<!--<class name="com.revature.test.TestReportPage"></class>
 	   <class name="com.revature.test.TestSVPLogin"></class>
-      <class name="com.revature.test.TestSVPTrainers"></class>
+      <class name="com.revature.test.TestSVPTrainers"></class>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
