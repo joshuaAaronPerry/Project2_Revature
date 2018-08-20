@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.revature.tests;
+=======
+package com.revature.test;
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,7 +11,11 @@ import org.testng.annotations.Test;
 
 public class TestTrainerSettings {
 
+<<<<<<< HEAD
 	@Test(dependsOnMethods = { "com.revature.tests.TestTrainerLogin.trainerLogin" })
+=======
+	@Test(dependsOnMethods = { "com.revature.test.TestTrainerLogin.trainerLogin" })
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 	public void openTrainSettingsPage() {
 		try {
 			Thread.sleep(4000);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.revature.tests;
+=======
+package com.revature.test;
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +14,11 @@ public class TestSVPSettingsPage {
 
 	//public static WebDriver wd = null;
 	
+<<<<<<< HEAD
 	@Test(dependsOnMethods = { "com.revature.tests.TestLogin.SVPlogin" })
+=======
+	@Test(dependsOnMethods = { "com.revature.test.TestSVPLogin.SVPlogin" })
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 	public void openSVPSettingsPage() {
 		try {
 			Thread.sleep(4000);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.revature.tests;
+=======
+package com.revature.test;
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 
 import java.io.File;
 
@@ -14,7 +18,11 @@ public class TestReportPage {
 	
 	public static WebDriver wd = null;
 
+<<<<<<< HEAD
 	@Test(dependsOnMethods = { "com.revature.tests.TestSVPLogin.SVPlogin" }, priority = 1)
+=======
+	@Test(dependsOnMethods = { "com.revature.test.TestSVPLogin.SVPlogin" }, priority = 1)
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 	public void openReportsPage() {
 		TestSVPLogin.openChrome();
 		TestSVPLogin.SVPlogin();

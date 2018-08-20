@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.revature.tests;
+=======
+package com.revature.test;
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

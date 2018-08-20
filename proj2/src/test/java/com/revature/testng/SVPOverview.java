@@ -1,3 +1,4 @@
+
 package com.revature.testng;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import org.testng.annotations.Test;
 
 public class SVPOverview {
 	static WebDriver wd = null;
+
 	private static void logout() {
 		try {
 			Thread.sleep(500);
@@ -28,7 +30,8 @@ public class SVPOverview {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		wd.findElement(By.xpath("//*[@id=\'mat-expansion-panel-header-0\']/span/mat-panel-description/mat-icon[1]")).click();
+		wd.findElement(By.xpath("//*[@id=\'mat-expansion-panel-header-0\']/span/mat-panel-description/mat-icon[1]"))
+				.click();
 	}
 
 	private static void cycleAllBatches() {
@@ -37,42 +40,43 @@ public class SVPOverview {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]")).click();
+		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]"))
+				.click();
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[2]")).click();
-		
-		
+
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]")).click();
+		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]"))
+				.click();
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[3]")).click();
-			
+
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]")).click();
+		wd.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']/span/mat-panel-description/mat-icon[2]"))
+				.click();
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		wd.findElement(By.xpath("//*[@id=\'cdk-overlay-0\']/div/div/button[1]")).click();
-		
-		
+
 	}
 
 	private static void cycleSorts() {
@@ -83,26 +87,26 @@ public class SVPOverview {
 			e.printStackTrace();
 		}
 		List<WebElement> elements = wd.findElements(By.cssSelector(".mat-sort-header-button"));
-		for (int i = 0;i<elements.size();i++) {
-				System.out.println("i = "+i);
-				try {
-					Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				elements.get(i).click();
-				try {
-					Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				}
+		for (int i = 0; i < elements.size(); i++) {
+			System.out.println("i = " + i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			elements.get(i).click();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	private static void loginSVP() {
-		
+
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -119,39 +123,37 @@ public class SVPOverview {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		wd = new ChromeDriver();
-		wd.get("https://assignforce-client.cfapps.io");		
+		wd.get("https://assignforce-client.cfapps.io");
 	}
-	
-	
-	@Test (priority=0)
+
+	@Test(priority = 0)
 	public void testAppLaunch() {
 		launchApplication();
 	}
-	
-	@Test (dependsOnMethods="testAppLaunch")
-	public void testLoginSVP(){
+
+	@Test(dependsOnMethods = "testAppLaunch")
+	public void testLoginSVP() {
 		loginSVP();
 	}
-	
-	@Test (dependsOnMethods="testLoginSVP")
+
+	@Test(dependsOnMethods = "testLoginSVP")
 	public void testCycleSorts() {
 		cycleSorts();
 	}
-	
-	@Test (dependsOnMethods="testCycleSorts")
+
+	@Test(dependsOnMethods = "testCycleSorts")
 	public void testCycleBatches() {
 		cycleAllBatches();
 	}
-	
-	@Test (dependsOnMethods="testCycleBatches")
+
+	@Test(dependsOnMethods = "testCycleBatches")
 	public void testExportCSV() {
 		exportCSV();
 	}
-	
+
 	@Test (priority=6)
 	public void testLogout() {
 		logout();
 	}
-	
 
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.revature.tests;
+=======
+package com.revature.test;
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -8,7 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+<<<<<<< HEAD
 import org.testng.annotations.Ignore;
+=======
+>>>>>>> d91f982c9e8c0dd4538a8e31894cb71c1031fcc6
 import org.testng.annotations.Test;
 
 public class TestSVPLogin {
