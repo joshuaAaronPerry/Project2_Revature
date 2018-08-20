@@ -15,7 +15,7 @@ public class TestSVPLogin {
 	public static WebDriver wd = null;
 	
 	public static void openChrome() {
-		File ff = new File("src/main/resources/chromedriver.exe");
+		File ff = new File("src/main/resources/chromedriver");
 		System.setProperty("webdriver.chrome.driver", ff.getAbsolutePath());
 		wd = new ChromeDriver();
 		wd.manage().window().maximize();
