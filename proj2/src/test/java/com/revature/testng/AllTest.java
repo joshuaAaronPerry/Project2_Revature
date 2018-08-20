@@ -19,7 +19,7 @@ public class AllTest {
 
 	public static void launchApp() {
 
-		File chrome = new File("src/main/resources/chromedriver.exe");
+		File chrome = new File("src/main/resources/chromedriver");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
 		d.get("https://assignforce-client.cfapps.io/login");
