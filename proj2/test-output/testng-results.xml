@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="4" ignored="0" total="9" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17568" started-at="2018-08-17T19:10:38Z" finished-at="2018-08-17T19:10:56Z">
+  <suite name="Default suite" duration-ms="20251" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:43:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17568" started-at="2018-08-17T19:10:38Z" finished-at="2018-08-17T19:10:56Z">
+    <test name="Default test" duration-ms="20251" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:43:11Z">
       <class name="com.revature.test.SVPLocations">
-        <test-method status="FAIL" signature="failTest()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="failTest" duration-ms="10" started-at="2018-08-17T19:10:38Z" finished-at="2018-08-17T19:10:38Z">
+        <test-method status="FAIL" signature="failTest()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="failTest" duration-ms="2" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:51Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -52,7 +52,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failTest -->
-        <test-method status="FAIL" signature="failTest2()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="failTest2" duration-ms="1" started-at="2018-08-17T19:10:38Z" finished-at="2018-08-17T19:10:38Z">
+        <test-method status="FAIL" signature="failTest2()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="failTest2" duration-ms="0" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:51Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -97,34 +97,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failTest2 -->
-        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testAppLaunch" duration-ms="5047" started-at="2018-08-17T19:10:38Z" finished-at="2018-08-17T19:10:43Z">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testAppLaunch" duration-ms="5516" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAppLaunch -->
-        <test-method status="PASS" signature="testLoginSVP()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testLoginSVP" duration-ms="2468" started-at="2018-08-17T19:10:43Z" depends-on-methods="com.revature.test.SVPLocations.testAppLaunch" finished-at="2018-08-17T19:10:46Z">
+        <test-method status="PASS" signature="testLoginSVP()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testLoginSVP" duration-ms="2265" started-at="2018-08-19T16:42:56Z" depends-on-methods="com.revature.test.SVPLocations.testAppLaunch" finished-at="2018-08-19T16:42:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginSVP -->
-        <test-method status="PASS" signature="testMoveToLocationBar()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testMoveToLocationBar" duration-ms="4616" started-at="2018-08-17T19:10:46Z" depends-on-methods="com.revature.test.SVPLocations.testLoginSVP" finished-at="2018-08-17T19:10:51Z">
+        <test-method status="PASS" signature="testMoveToLocationBar()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testMoveToLocationBar" duration-ms="5472" started-at="2018-08-19T16:42:59Z" depends-on-methods="com.revature.test.SVPLocations.testLoginSVP" finished-at="2018-08-19T16:43:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMoveToLocationBar -->
-        <test-method status="PASS" signature="testCloseApp()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testCloseApp" duration-ms="2692" started-at="2018-08-17T19:10:51Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-17T19:10:53Z">
+        <test-method status="PASS" signature="testCloseApp()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testCloseApp" duration-ms="3306" started-at="2018-08-19T16:43:04Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCloseApp -->
-        <test-method status="FAIL" signature="testCollapseLocation()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testCollapseLocation" duration-ms="2" started-at="2018-08-17T19:10:53Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-17T19:10:53Z">
+        <test-method status="FAIL" signature="testCollapseLocation()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testCollapseLocation" duration-ms="0" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'TSBA', ip: '192.168.60.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'TSBA', ip: '192.168.60.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
@@ -166,18 +166,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCollapseLocation -->
-        <test-method status="FAIL" signature="testExpandLocation()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testExpandLocation" duration-ms="4" started-at="2018-08-17T19:10:53Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-17T19:10:53Z">
+        <test-method status="FAIL" signature="testExpandLocation()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testExpandLocation" duration-ms="0" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'TSBA', ip: '192.168.60.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'TSBA', ip: '192.168.60.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
@@ -219,7 +219,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpandLocation -->
-        <test-method status="PASS" signature="testLaunchResults()[pri:0, instance:com.revature.test.SVPLocations@1e7c7811]" name="testLaunchResults" duration-ms="2675" started-at="2018-08-17T19:10:53Z" depends-on-methods="com.revature.test.SVPLocations.testCloseApp" finished-at="2018-08-17T19:10:56Z">
+        <test-method status="PASS" signature="testLaunchResults()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testLaunchResults" duration-ms="3591" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testCloseApp" finished-at="2018-08-19T16:43:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLaunchResults -->

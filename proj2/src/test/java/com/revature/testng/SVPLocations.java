@@ -6,19 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SVPLocations {
 	static WebDriver d = null;
+
 //  		closeApp();
 //  		launchApp();
 //  		loginTrainer();
@@ -35,7 +27,8 @@ public class SVPLocations {
 	public static void loginSVP() {
 
 		boolean expand = true;
-		while (expand) {
+		int i = 0;
+		while (expand && i < 10) {
 			try {
 				Thread.sleep(500);
 				d.findElement(By.name("email")).sendKeys("svp@revature.com");
@@ -46,8 +39,10 @@ public class SVPLocations {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("Nope");
+				i++;
 			} catch (Exception e) {
 				System.out.println("Naw");
+				i++;
 
 			}
 		}
@@ -166,12 +161,11 @@ public class SVPLocations {
 		d.quit();
 	}
 
-	
 	public static void launchResults() {
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		d = new ChromeDriver();
-		d.get("C:\\project2\\proj2\\test-output\\index.html");
+		d.get("C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
 	}
 	
 	@Test
@@ -194,10 +188,33 @@ public class SVPLocations {
 		closeApp();
 	}
 	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testCollapseLocation() {
+		collapseFirstLocation();
+	}
+	
+	@Test (dependsOnMethods = "testMoveToLocationBar")
+	public void testExpandLocation() {
+		expandFirstLocation();
+	}
+	
+	
 	@Test (dependsOnMethods = "testCloseApp")
 	public void testLaunchResults() {
 		launchResults();
-
 	}
+	
+	@Test
+	public void failTest() {
+		
+		Assert.assertEquals(false, true);
+	}
+	
+	@Test
+	public void failTest2() {
+		
+		Assert.assertEquals(false, true);
+	}
+	
 
 }
