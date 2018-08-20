@@ -14,7 +14,7 @@ public class TestReportPage {
 	
 	public static WebDriver wd = null;
 
-	@Test(dependsOnMethods = { "com.revature.tests.TestSVPLogin.SVPlogin" }, priority = 1)
+	@Test(dependsOnMethods = { "com.revature.test.TestSVPLogin.SVPlogin" }, priority = 1)
 	public void openReportsPage() {
 		TestSVPLogin.openChrome();
 		TestSVPLogin.SVPlogin();
