@@ -1,4 +1,4 @@
-package com.revature.webdriver;
+package com.revature.testng;
 
 import java.io.File;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class Svp_overview {
+public class SVPOverview {
 	static WebDriver wd = null;
 	private static void logout() {
 		try {

@@ -1,8 +1,8 @@
-package com.revature.testng;
+package com.revature.test;
 
 import org.testng.annotations.Test;
 
-public class SVPTabTester {
+public class SVPProfiles {
   @Test
   public void f() {
   }
