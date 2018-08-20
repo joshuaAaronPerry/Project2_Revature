@@ -1,4 +1,4 @@
-package com.revature.tests;
+package com.revature.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestTrainerSettings {
 
-	@Test(dependsOnMethods = { "com.revature.tests.TestTrainerLogin.trainerLogin" })
+	@Test(dependsOnMethods = { "com.revature.test.TestTrainerLogin.trainerLogin" })
 	public void openTrainSettingsPage() {
 		try {
 			Thread.sleep(4000);
