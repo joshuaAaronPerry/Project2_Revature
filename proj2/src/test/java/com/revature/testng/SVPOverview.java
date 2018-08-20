@@ -91,205 +91,14 @@ public class SVPOverview {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println("i  before click = "+i);
 				elements.get(i).click();
-				System.out.println("i after click = "+i);
 				try {
 					Thread.sleep(1000);
 					} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println("i = "+i);
 				}
-		
-		
-//		try {
-//			Thread.sleep(3000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		//Name Sorting
-//		System.out.println(elements.get(0).getText());
-//		elements.get(0).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(0).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(0).click();
-//		
-//		//Curriculum sorting
-//		System.out.println(elements.get(1).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(1).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(1).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(1).click();
-//		
-//		//Trainer/Co-Trainer sorting
-//		System.out.println(elements.get(2).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(2).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(2).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(2).click();
-//		
-//		//Location sorting
-//		System.out.println(elements.get(3).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(3).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(3).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(3).click();
-//		
-//		//Building sorting
-//		System.out.println(elements.get(4).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(4).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(4).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(4).click();
-//		
-//		//Room sorting
-//		System.out.println(elements.get(5).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(5).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(5).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(5).click();
-//		//Start Date sorting
-//		System.out.println(elements.get(6).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(6).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(6).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(6).click();
-//		//End Date sorting
-//		System.out.println(elements.get(7).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(7).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(7).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(7).click();
-//		//Progress sorting
-//		System.out.println(elements.get(8).getText());
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(8).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(8).click();
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		elements.get(8).click();
 	}
 
 	private static void loginSVP() {
@@ -314,7 +123,7 @@ public class SVPOverview {
 	}
 	
 	
-	@Test
+	@Test (priority=0)
 	public void testAppLaunch() {
 		launchApplication();
 	}
@@ -337,6 +146,11 @@ public class SVPOverview {
 	@Test (dependsOnMethods="testCycleBatches")
 	public void testExportCSV() {
 		exportCSV();
+	}
+	
+	@Test (priority=6)
+	public void testLogout() {
+		logout();
 	}
 	
 
