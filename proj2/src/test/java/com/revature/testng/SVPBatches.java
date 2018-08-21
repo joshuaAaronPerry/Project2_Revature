@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+
 public class SVPBatches {
 	static WebDriver wd = null;
 	private static void logout() {
@@ -49,7 +50,6 @@ private static void createBatch() {
 	try {
 		Thread.sleep(1000);
 	} catch (InterruptedException e2) {
-		// TODO Auto-generated catch block
 		e2.printStackTrace();
 	}
 	wd.findElement(By.id("mat-input-3")).click();
@@ -67,7 +67,7 @@ private static void createBatch() {
 		e.printStackTrace();
 	}
 	wd.findElement(By.xpath("//*[@id=\'cdk-accordion-child-2\']/div/form/div[5]/button[1]")).click();
-	
+
 }
 
 private static void editBatch() {

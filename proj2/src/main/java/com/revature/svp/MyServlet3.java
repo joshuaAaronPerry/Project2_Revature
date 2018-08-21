@@ -26,8 +26,8 @@ public class MyServlet3 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.setStatus(response.SC_MOVED_TEMPORARILY);
-		response.setHeader("Location", "C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
+//		response.setStatus(response.SC_MOVED_TEMPORARILY);
+//		response.setHeader("Location", "C:\\Users\\LiL'Birdman\\Documents\\Project\\Revature\\Project2\\proj2\\test-output\\Default suite\\Default test.html");
 	}
 
 	/**
