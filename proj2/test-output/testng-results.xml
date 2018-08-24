@@ -1,130 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="9" passed="5">
+<testng-results skipped="0" failed="2" ignored="0" total="11" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20251" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:43:11Z">
+  <suite name="Suite" duration-ms="38445" started-at="2018-08-24T16:49:43Z" finished-at="2018-08-24T16:50:22Z">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.revature.testng.TestRunner@5c072e3f]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="20251" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:43:11Z">
-      <class name="com.revature.test.SVPLocations">
-        <test-method status="FAIL" signature="failTest()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="failTest" duration-ms="2" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:51Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.revature.test.SVPLocations.failTest(SVPLocations.java:222)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failTest -->
-        <test-method status="FAIL" signature="failTest2()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="failTest2" duration-ms="0" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:51Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.revature.test.SVPLocations.failTest2(SVPLocations.java:228)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failTest2 -->
-        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testAppLaunch" duration-ms="5516" started-at="2018-08-19T16:42:51Z" finished-at="2018-08-19T16:42:56Z">
+    <test name="Test" duration-ms="38445" started-at="2018-08-24T16:49:43Z" finished-at="2018-08-24T16:50:22Z">
+      <class name="com.revature.testng.TrainerOverview">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.testng.TrainerOverview@10a035a0]" name="testAppLaunch" duration-ms="4410" started-at="2018-08-24T16:50:17Z" finished-at="2018-08-24T16:50:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAppLaunch -->
-        <test-method status="PASS" signature="testLoginSVP()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testLoginSVP" duration-ms="2265" started-at="2018-08-19T16:42:56Z" depends-on-methods="com.revature.test.SVPLocations.testAppLaunch" finished-at="2018-08-19T16:42:59Z">
+      </class> <!-- com.revature.testng.TrainerOverview -->
+      <class name="com.revature.testng.NewTest">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testAppLaunch" duration-ms="9586" started-at="2018-08-24T16:49:43Z" finished-at="2018-08-24T16:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppLaunch -->
+        <test-method status="PASS" signature="testLoginSVP()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testLoginSVP" duration-ms="2034" started-at="2018-08-24T16:49:53Z" depends-on-methods="com.revature.testng.NewTest.testAppLaunch" finished-at="2018-08-24T16:49:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginSVP -->
-        <test-method status="PASS" signature="testMoveToLocationBar()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testMoveToLocationBar" duration-ms="5472" started-at="2018-08-19T16:42:59Z" depends-on-methods="com.revature.test.SVPLocations.testLoginSVP" finished-at="2018-08-19T16:43:04Z">
+        <test-method status="PASS" signature="testMoveToLocationBar()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testMoveToLocationBar" duration-ms="6086" started-at="2018-08-24T16:49:55Z" depends-on-methods="com.revature.testng.NewTest.testLoginSVP" finished-at="2018-08-24T16:50:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMoveToLocationBar -->
-        <test-method status="PASS" signature="testCloseApp()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testCloseApp" duration-ms="3306" started-at="2018-08-19T16:43:04Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
+        <test-method status="PASS" signature="testClickLocationBar()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testClickLocationBar" duration-ms="199" started-at="2018-08-24T16:50:01Z" depends-on-methods="com.revature.testng.NewTest.testMoveToLocationBar" finished-at="2018-08-24T16:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickLocationBar -->
+        <test-method status="PASS" signature="testCloseApp()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testCloseApp" duration-ms="2736" started-at="2018-08-24T16:50:01Z" depends-on-methods="com.revature.testng.NewTest.testMoveToLocationBar" finished-at="2018-08-24T16:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCloseApp -->
-        <test-method status="FAIL" signature="testCollapseLocation()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testCollapseLocation" duration-ms="0" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
+        <test-method status="FAIL" signature="testCollapseLocation()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testCollapseLocation" duration-ms="32" started-at="2018-08-24T16:50:04Z" depends-on-methods="com.revature.testng.NewTest.testMoveToLocationBar" finished-at="2018-08-24T16:50:04Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LENOVO-PC', ip: '192.168.61.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LENOVO-PC', ip: '192.168.61.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
@@ -133,8 +56,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:4
 at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
 at org.openqa.selenium.By$ById.findElement(By.java:218)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
-at com.revature.test.SVPLocations.collapseFirstLocation(SVPLocations.java:144)
-at com.revature.test.SVPLocations.testCollapseLocation(SVPLocations.java:205)
+at com.revature.testng.NewTest.collapseFirstLocation(NewTest.java:162)
+at com.revature.testng.NewTest.testCollapseLocation(NewTest.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -166,18 +89,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCollapseLocation -->
-        <test-method status="FAIL" signature="testExpandLocation()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testExpandLocation" duration-ms="0" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testMoveToLocationBar" finished-at="2018-08-19T16:43:07Z">
+        <test-method status="FAIL" signature="testExpandLocation()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testExpandLocation" duration-ms="16" started-at="2018-08-24T16:50:04Z" depends-on-methods="com.revature.testng.NewTest.testMoveToLocationBar" finished-at="2018-08-24T16:50:04Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LENOVO-PC', ip: '192.168.61.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'LAPTOP-1SMV8AQQ', ip: '192.168.2.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+System info: host: 'LENOVO-PC', ip: '192.168.61.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
 Driver info: driver.version: RemoteWebDriver
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
@@ -186,8 +109,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:4
 at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
 at org.openqa.selenium.By$ById.findElement(By.java:218)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
-at com.revature.test.SVPLocations.expandFirstLocation(SVPLocations.java:140)
-at com.revature.test.SVPLocations.testExpandLocation(SVPLocations.java:210)
+at com.revature.testng.NewTest.expandFirstLocation(NewTest.java:158)
+at com.revature.testng.NewTest.testExpandLocation(NewTest.java:230)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -219,11 +142,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpandLocation -->
-        <test-method status="PASS" signature="testLaunchResults()[pri:0, instance:com.revature.test.SVPLocations@6a1aab78]" name="testLaunchResults" duration-ms="3591" started-at="2018-08-19T16:43:07Z" depends-on-methods="com.revature.test.SVPLocations.testCloseApp" finished-at="2018-08-19T16:43:11Z">
+        <test-method status="PASS" signature="testLaunchResults()[pri:0, instance:com.revature.testng.NewTest@10dba097]" name="testLaunchResults" duration-ms="2413" started-at="2018-08-24T16:50:04Z" depends-on-methods="com.revature.testng.NewTest.testCloseApp" finished-at="2018-08-24T16:50:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLaunchResults -->
-      </class> <!-- com.revature.test.SVPLocations -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.revature.testng.NewTest -->
+      <class name="com.revature.testng.SVPBatches">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.testng.SVPBatches@eb21112]" name="testAppLaunch" duration-ms="5031" started-at="2018-08-24T16:50:07Z" finished-at="2018-08-24T16:50:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppLaunch -->
+      </class> <!-- com.revature.testng.SVPBatches -->
+      <class name="com.revature.testng.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.revature.testng.TestRunner@5c072e3f]" name="setUpClass" is-config="true" duration-ms="183" started-at="2018-08-24T16:50:22Z" finished-at="2018-08-24T16:50:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.revature.testng.TestRunner@5c072e3f]" name="tearDownClass" is-config="true" duration-ms="12" started-at="2018-08-24T16:50:22Z" finished-at="2018-08-24T16:50:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.revature.testng.TestRunner -->
+      <class name="com.revature.testng.SVPOverview">
+        <test-method status="PASS" signature="testAppLaunch()[pri:0, instance:com.revature.testng.SVPOverview@3578436e]" name="testAppLaunch" duration-ms="5561" started-at="2018-08-24T16:50:12Z" finished-at="2018-08-24T16:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppLaunch -->
+      </class> <!-- com.revature.testng.SVPOverview -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -8,13 +8,13 @@
   	<servlet-name>TestServlet</servlet-name>
   	<display-name>TestServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.svp.TestServlet</servlet-class>
+  	<servlet-class>com.revature.driver.TestServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>MyServlet3</servlet-name>
   	<display-name>MyServlet3</display-name>
   	<description></description>
-  	<servlet-class>com.revature.svp.MyServlet3</servlet-class>
+  	<servlet-class>com.revature.driver.MyServlet3</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>TestServlet</servlet-name>
@@ -22,6 +22,10 @@
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>MyServlet3</servlet-name>
-  	<url-pattern>/MyServlet3</url-pattern>
+  	<url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  <welcome-file-list>
+<!-- 		<welcome-file>../../../test-output/index.html</welcome-file>
+ -->		<welcome-file>testApp/index.html</welcome-file>
+	</welcome-file-list>
 </web-app>

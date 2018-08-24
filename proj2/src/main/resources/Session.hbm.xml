@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.revature.driver.MySession" table="SessionTable">
+		<id name="sid" type="int">
+			<column name = "SID" not-null="true" unique="true" length = "10"></column>
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="date" type = "date">
+		<column name="S_DATE" length="10"></column>
+		</property>
+		
+		<property name="numOfTest" type = "int">
+		<column name="TESTED" length="10"></column>
+		</property>
+		
+		<property name="numOfInclude" type = "int">
+		<column name="INCLUDED" length="10"></column>
+		</property>
+		
+		<property name="numOfExclude" type = "int">
+		<column name="EXCLUDED" length="10"></column>
+		</property>
+		
+		<property name="numOfPass" type = "int">
+		<column name="PASS" length="10"></column>
+		</property>
+		
+		<property name="numOfFail" type = "int">
+		<column name="FAIL" length="10"></column>
+		</property>
+		
+		<property name="numOfSkipped" type = "int">
+		<column name="SKIPPED" length="10"></column>
+		</property>
+		
+		
+	</class>
+</hibernate-mapping>
