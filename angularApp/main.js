@@ -38,7 +38,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var _tests_tests_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tests/tests.component */ "./src/app/tests/tests.component.ts");
 /* harmony import */ var _test_detail_test_detail_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./test-detail/test-detail.component */ "./src/app/test-detail/test-detail.component.ts");
+<<<<<<< HEAD
 /* harmony import */ var _report_report_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./report/report.component */ "./src/app/report/report.component.ts");
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,12 +53,18 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 var routes = [
     { path: 'dashboard', component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_2__["DashboardComponent"] },
     { path: 'detail/:id', component: _test_detail_test_detail_component__WEBPACK_IMPORTED_MODULE_4__["TestDetailComponent"] },
     { path: 'tests', component: _tests_tests_component__WEBPACK_IMPORTED_MODULE_3__["TestsComponent"] },
+<<<<<<< HEAD
     { path: 'report', component: _report_report_component__WEBPACK_IMPORTED_MODULE_5__["ReportComponent"] }
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -91,7 +100,11 @@ module.exports = "/* AppComponent's private CSS styles */\r\nh1 {\r\n    font-si
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<h1>{{title}}</h1>\r\n<nav>\r\n  <a routerLink=\"/dashboard\">Dashboard</a>\r\n  <a routerLink=\"/tests\">Tests</a>\r\n  <a href=\"/report\">Protractor Tests</a>\r\n</nav>\r\n<router-outlet></router-outlet>\r\n<app-messages></app-messages>\r\n\r\n<br>"
+=======
+module.exports = "<h1>{{title}}</h1>\n<nav>\n  <a routerLink=\"/dashboard\">Dashboard</a>\n  <a routerLink=\"/tests\">Tests</a>\n  <a href=\"/angularApp/dist/angularApp/tmp/screenshots/report.html\">Protractor Tests</a>\n</nav>\n<router-outlet></router-outlet>\n<app-messages></app-messages>\n\n<br>"
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 
 /***/ }),
 
@@ -121,7 +134,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent(http) {
         this.http = http;
+<<<<<<< HEAD
         this.title = 'assignforce test';
+=======
+        this.title = 'angularApp';
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -161,7 +178,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tests_tests_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tests/tests.component */ "./src/app/tests/tests.component.ts");
 /* harmony import */ var _test_search_test_search_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./test-search/test-search.component */ "./src/app/test-search/test-search.component.ts");
 /* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./messages/messages.component */ "./src/app/messages/messages.component.ts");
+<<<<<<< HEAD
 /* harmony import */ var _report_report_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./report/report.component */ "./src/app/report/report.component.ts");
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,7 +201,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -204,7 +227,10 @@ var AppModule = /** @class */ (function () {
                 _test_detail_test_detail_component__WEBPACK_IMPORTED_MODULE_9__["TestDetailComponent"],
                 _messages_messages_component__WEBPACK_IMPORTED_MODULE_12__["MessagesComponent"],
                 _test_search_test_search_component__WEBPACK_IMPORTED_MODULE_11__["TestSearchComponent"],
+<<<<<<< HEAD
                 _report_report_component__WEBPACK_IMPORTED_MODULE_13__["ReportComponent"],
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
@@ -234,7 +260,11 @@ module.exports = "/* DashboardComponent's private CSS styles */\r\n[class*='col-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<h3>Assignforce Tests</h3>\r\n<div class=\"grid grid-pad\">\r\n  <a *ngFor=\"let test of tests\" class=\"col-1-4\"\r\n      routerLink=\"/detail/{{test.id}}\">\r\n    <div class=\"module test\">\r\n      <h4>{{test.name}}</h4>\r\n    </div>\r\n  </a>\r\n</div>\r\n\r\n<app-test-search></app-test-search>\r\n"
+=======
+module.exports = "<h3>Assignforce Tests</h3>\n<div class=\"grid grid-pad\">\n  <a *ngFor=\"let test of tests\" class=\"col-1-4\"\n      routerLink=\"/detail/{{test.id}}\">\n    <div class=\"module test\">\n      <h4>{{test.name}}</h4>\n    </div>\n  </a>\n</div>\n\n<app-test-search></app-test-search>\n"
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 
 /***/ }),
 
@@ -390,7 +420,11 @@ module.exports = "/* MessagesComponent's private CSS styles */\r\nh2 {\r\n    co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<div *ngIf=\"messageService.messages.length\">\r\n\r\n  <!-- <h2>Messages</h2> -->\r\n  <button class=\"clear\"\r\n          (click)=\"messageService.clear()\">clear</button>\r\n  <div *ngFor='let message of messageService.messages'> {{message}} </div>\r\n\r\n</div>\r\n"
+=======
+module.exports = "<div *ngIf=\"messageService.messages.length\">\n\n  <!-- <h2>Messages</h2> -->\n  <button class=\"clear\"\n          (click)=\"messageService.clear()\">clear</button>\n  <div *ngFor='let message of messageService.messages'> {{message}} </div>\n\n</div>\n"
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 
 /***/ }),
 
@@ -438,6 +472,7 @@ var MessagesComponent = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/app/report/report.component.css":
 /*!*********************************************!*\
   !*** ./src/app/report/report.component.css ***!
@@ -501,6 +536,8 @@ var ReportComponent = /** @class */ (function () {
 
 /***/ }),
 
+=======
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 /***/ "./src/app/test-detail/test-detail.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/test-detail/test-detail.component.css ***!
@@ -614,7 +651,11 @@ module.exports = "\r\n.search-result li {\r\n    border-bottom: 1px solid gray;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<div id=\"search-component\">\r\n  <h4>Test Search</h4>\r\n\r\n  <input #searchBox id=\"search-box\" (keyup)=\"search(searchBox.value)\" />\r\n\r\n  <ul class=\"search-result\">\r\n    <li *ngFor=\"let test of tests$ | async\" >\r\n      <a routerLink=\"/detail/{{test.id}}\">\r\n        {{test.name}}\r\n      </a>\r\n    </li>\r\n  </ul>\r\n</div>\r\n"
+=======
+module.exports = "<div id=\"search-component\">\n  <h4>Test Search</h4>\n\n  <input #searchBox id=\"search-box\" (keyup)=\"search(searchBox.value)\" />\n\n  <ul class=\"search-result\">\n    <li *ngFor=\"let test of tests$ | async\" >\n      <a routerLink=\"/detail/{{test.id}}\">\n        {{test.name}}\n      </a>\n    </li>\n  </ul>\n</div>\n"
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 
 /***/ }),
 
@@ -820,7 +861,11 @@ module.exports = ".tests {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: non
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<h2>Tests</h2>\r\n\r\n<div>\r\n  <label>Test name:\r\n    <input #testName />\r\n  </label>\r\n  <!-- (click) passes input value to add() and then clears the input -->\r\n  <!-- <button (click)=\"add(testName.value); testName.value=''\">\r\n    add\r\n  </button> -->\r\n</div>\r\n\r\n<ul class=\"tests\">\r\n  <li *ngFor=\"let test of tests\">\r\n    <a routerLink=\"/detail/{{test.id}}\">\r\n      <span class=\"badge\">{{test.id}}</span> {{test.name}}\r\n    </a>\r\n    <button class=\"delete\" title=\"delete test\"\r\n      (click)=\"delete(test)\">x</button>\r\n  </li>\r\n</ul>\r\n"
+=======
+module.exports = "<h2>Tests</h2>\n\n<div>\n  <label>Test name:\n    <input #testName />\n  </label>\n  <!-- (click) passes input value to add() and then clears the input -->\n  <!-- <button (click)=\"add(testName.value); testName.value=''\">\n    add\n  </button> -->\n</div>\n\n<ul class=\"tests\">\n  <li *ngFor=\"let test of tests\">\n    <a routerLink=\"/detail/{{test.id}}\">\n      <span class=\"badge\">{{test.id}}</span> {{test.name}}\n    </a>\n    <button class=\"delete\" title=\"delete test\"\n      (click)=\"delete(test)\">x</button>\n  </li>\n</ul>\n"
+>>>>>>> ee1c2f20de08dc6d45e1dba99b8b3da1f12811c7
 
 /***/ }),
 
